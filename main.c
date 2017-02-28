@@ -71,6 +71,7 @@ void whileloop(){
 
 //even or odd
 void evenOrOdd(){
+    printf("\n=================evenOrOdd method=================\n");
     int i = 0;
     for(i = 0 ;i<=10;++i){
         if(i&1){
@@ -82,6 +83,7 @@ void evenOrOdd(){
 }
 
 void doWhileLoop(){
+    printf("\n=================doWhileLoop method=================\n");
     int i = 1;
     do{
         printf("hello %d\n",i);
@@ -90,16 +92,18 @@ void doWhileLoop(){
 }
 
 void nestedLoop(){
+    printf("\n=================nestedLoop method=================\n");
     int i = 0,j=0;
     for(i=0;i<3;++i){
         for(j=0;j<4;++j){
             printf("hello %d+%d=%d\n",i,j,i+j);
         }
-        printf("");
+        printf(" ");
     }
 }
 
 void loopBreak(){
+    printf("\n=================loopBreak method=================\n");
     srand(time(NULL));
     int a,b;
     while(1){
@@ -116,6 +120,7 @@ void loopBreak(){
 }
 
 void enterEx(){
+    printf("\n=================enterEx method=================\n");
     int i;
     puts("enter a number in below:");
     scanf("%d",&i);
@@ -123,6 +128,7 @@ void enterEx(){
 }
 
 void asciiOfChar(){
+    printf("\n=================asciiOfChar method=================\n");
     char c ;
     puts("enter a character in below:");
     scanf("%c",&c);
@@ -130,6 +136,7 @@ void asciiOfChar(){
 }
 
 void switchCase(){
+    printf("\n=================switchCase method=================\n");
     char grade = 'B';
 
     switch (grade){
@@ -155,13 +162,15 @@ void switchCase(){
 
 //show time
 void displayDate(){
+    printf("\n=================displayDate method=================\n");
     time_t t;
     time(&t);
     printf("today date and time is:%s",ctime(&t));
 }
 
 void menuDriven(){
-     int choice, num, i;
+    printf("\n=================menuDriven method=================\n");
+    int choice, num, i;
     unsigned long int fact;
 
     while (1){
@@ -215,6 +224,7 @@ void menuDriven(){
 }
 
 int getAnswer(){
+    printf("\n=================getAnswer method=================\n");
     int c ; 
     int a=0;
     while((c=getchar())!=EOF && c!='\n'){
@@ -226,6 +236,7 @@ int getAnswer(){
 }
 
 void getchEx(){
+    printf("\n=================getchEx method=================\n");
     int f ,c;
     printf("Do you have a Fever? y/n\n");
     f = getAnswer();
@@ -235,7 +246,7 @@ void getchEx(){
     
     printf("Here are the results you input:\n");
     printf("Do you have a fever? %c\n", f);
-    printf("Do you have a runny nose or cough? %c\n", f);
+    printf("Do you have a runny nose or cough? %c\n", c);
     
     printf("==============putchar in below:=============\n");
     char ch;
@@ -245,6 +256,7 @@ void getchEx(){
 }
 
 void caseReverse(){
+    printf("\n=================caseReverse method=================\n");
     char a;
     printf("Enter an alphabet : ");
     a = getchar();
@@ -263,6 +275,7 @@ The first perfect number is 6, because 1, 2, and 3
 are its proper positive divisors, and 1 + 2 + 3 = 6.
 */
 void perfectNum(){
+    printf("\n=================perfectNum method=================\n");
     int n ;
     int i=1,sum=0;
 	printf("Enter a number: ");
@@ -282,6 +295,7 @@ void perfectNum(){
 }
 
 void fibonacciSeries(){
+    printf("\n=================fibonacciSeries method=================\n");
     int n ;
     int a=0,b=1,c=0;
 	printf("Enter a number to define the length of fibonacci series: ");
@@ -295,6 +309,7 @@ void fibonacciSeries(){
     }
 }
 void Factorial(){
+    printf("\n=================Factorial method=================\n");
     int n;
     int i=1 ,fac=1;
     printf("Enter a number: ");
@@ -310,6 +325,7 @@ void Factorial(){
 3**3 + 7**3 + 1**3 = 371
 */
 void armstrongNum(){
+    printf("\n=================armstrongNum method=================\n");
     int n;
     int a =0,b=0 ,t =0;
     printf("Enter a number: ");
@@ -334,6 +350,7 @@ INPUT: 345
 OUTPUT: 543
 */
 void reverseNum(){
+    printf("\n=================reverseNum method=================\n");
     int n;
     int r=0 ,t =0;
     printf("Enter a number: ");
@@ -348,6 +365,7 @@ void reverseNum(){
 }
 
 void gcd(){
+    printf("\n=================gcd method=================\n");
     int a,b;
     int x,y,t;
     int lcm;
@@ -368,11 +386,42 @@ void gcd(){
 }
 
 void lcm(){
+    printf("\n=================lcm method=================\n");
     int n;
-    int r=0 ,t =0;
     printf("Enter a number: ");
 	scanf("%d", &n);
 }
+
+void decimalToBinary(){
+    printf("\n=================decimalToBinary method=================\n");
+    int n;
+    int i = 1;
+    int t = 0;
+    printf("Enter a number: ");
+	scanf("%i", &n);
+	for(i = 31 ; i >=0 ; i--){
+	    t = n >> i;
+	    if(t & 1 ){
+	        printf("1");
+        }else{
+            printf("0");
+        }
+    }
+	
+}
+
+void swapWithoutSpace(){
+    printf("\n=================swapWithoutSpace method=================\n");
+    int a,b;
+    printf("Enter two number: ");
+	scanf("%i,%i", &a,&b); 
+	printf("before swap:a=%i,b=%i\n",a,b);
+	a = a^b;
+	b = a^b;
+	a = a^b;
+	
+	printf("after swap:a=%i,b=%i\n",a,b);
+} 
 
 int main(int argc, char **argv){
     system("cls");
@@ -400,11 +449,11 @@ int main(int argc, char **argv){
     Factorial();
     armstrongNum();
     reverseNum();
+    gcd();
     */
     
-    
-    
-    gcd();
+    decimalToBinary();
+    swapWithoutSpace();
     
     //test ended!
     getch();
