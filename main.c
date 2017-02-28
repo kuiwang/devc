@@ -421,7 +421,26 @@ void swapWithoutSpace(){
 	a = a^b;
 	
 	printf("after swap:a=%i,b=%i\n",a,b);
-} 
+}
+
+void swapOddAndEven(){
+    printf("\n=================swapOddAndEven method=================\n");
+    int n,i,t,res;
+    printf("Enter number: ");
+	scanf("%i", &n);
+	printf("n is:");
+	for(i = 31 ; i >=0 ; i--){
+	    t = n >> i;
+	    if(t & 1 ){
+	        printf("1");
+        }else{
+            printf("0");
+        }
+    }
+    printf("\n");
+	res = N(n);
+	printf("after swap odd and even:%i",res);
+}
 
 int main(int argc, char **argv){
     system("cls");
@@ -450,10 +469,11 @@ int main(int argc, char **argv){
     armstrongNum();
     reverseNum();
     gcd();
-    */
-    
     decimalToBinary();
     swapWithoutSpace();
+    */
+    
+    swapOddAndEven();
     
     //test ended!
     getch();

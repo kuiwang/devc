@@ -8,6 +8,9 @@
 #define INT int
 #define LONG long
 
+//将一个int型的数的奇偶位互换
+#define N(n) ((n<<1)&(0xAAAA))|((n>>1)&(0x5555))
+
 //loop method
 void forloop();
 
