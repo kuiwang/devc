@@ -9,7 +9,8 @@
 #define LONG long
 
 //将一个int型的数的奇偶位互换
-#define N(n) ((n<<1)&(0xAAAA))|((n>>1)&(0x5555))
+#define N(n) ((n<<1)&(0xAAAA))|((n>>1)&(0x5555));
+#define ExchangeOddEven(x) (((x & (0x55555555)) << 1) | (((x&0xAAAAAAAA)>>1)&0x7fffffff))
 
 //loop method
 void forloop();
@@ -80,5 +81,8 @@ void lcm();
 void decimalToBinary();
 
 //不使用额外空间,交换两个数字
-void swapWithoutSpace(); 
+void swapWithoutSpace();
+
+//带有参数的将数值转换为二进制形式
+void decimalToBinaryWithParam(int n); 
 

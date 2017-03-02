@@ -407,7 +407,6 @@ void decimalToBinary(){
             printf("0");
         }
     }
-	
 }
 
 void swapWithoutSpace(){
@@ -442,6 +441,19 @@ void swapOddAndEven(){
 	printf("after swap odd and even:%i",res);
 }
 
+void decimalToBinaryWithParam(int n){
+    int i ,t;
+    for(i = 31 ; i >=0 ; i--){
+	    t = n >> i;
+	    if(t & 1 ){
+	        printf("1");
+        }else{
+            printf("0");
+        }
+    }
+    printf("\n");
+}
+
 int main(int argc, char **argv){
     system("cls");
     
@@ -471,18 +483,31 @@ int main(int argc, char **argv){
     gcd();
     decimalToBinary();
     swapWithoutSpace();
+    swapOddAndEven();
     */
     
-    swapOddAndEven();
+    /*
+    int i = -6;
+    //-6补码:
+    //1111 1111 1111 1111 1111 1111 1111 1010 
+    // 
+    int j = -7;
+    printf("\n%i&1 = %i\n",i,(i&1));
+    printf("%i&1 = %i\n",j,(j&1));
+    */
+    printf("-9的补码形式:\n");
+    decimalToBinaryWithParam(-9);
+    printf("-9>>2补码形式:\n");
+    decimalToBinaryWithParam((-9>>2));
     
+    printf("9的补码形式:\n");
+    decimalToBinaryWithParam(9);
+    printf("9>>2补码形式:\n");
+    decimalToBinaryWithParam((9>>2));
+    printf("-12补码形式:\n");
+    decimalToBinaryWithParam(-12);
+    //printf("change odd and even:%d",ExchangeOddEven(-6));
     //test ended!
     getch();
 }
-
-
-
-
-
-
-
 
